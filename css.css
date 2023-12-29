@@ -40,7 +40,7 @@ h1{
     background-color: black;
     height: calc(var(--left_height)/5);
     grid-column: span 1;
-    color: #dd2244;
+    color: #D95F76;
     padding: 0.2rem;
     font-family: 'pacifico';
     letter-spacing: 2px;
