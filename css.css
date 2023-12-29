@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins';
+    --left_height:calc(90vh - 3rem);
+}
+
+body{
+    background-image: url(https://images3.alphacoders.com/115/1155716.png);
+    background-size: cover;
+}
+
+header{
+    height: 10vh;
+    margin-bottom: 2.5rem;
+}
+
+h1{
+    font-family: 'great vibes';
+    display: inline;
+    float: right;
+    margin-right: 6rem;
+    margin-top: 1rem;
+    font-size: 4.5rem;
+    color: rgb(238, 240, 243)
+}
+
+.mainapp{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: calc(100%-1rem);
+    height: var(--left_height-);
+    margin: 0.5rem;
+}
+
+.mainapp > div{
+    /* border:1px rgba(48, 48, 48, 0.411) solid; */
+    border: 1px solid rgba(184, 108, 217, 0.3);
+    background-color: black;
+    height: calc(var(--left_height)/5);
+    grid-column: span 1;
+    color: #dd2244;
+    padding: 0.2rem;
+    font-family: 'pacifico';
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
