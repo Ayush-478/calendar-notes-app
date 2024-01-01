@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url(https://wallpapercave.com/dwp2x/wp10361794.png);
+    background-image: url(wp10361794.png);
     background-size: cover;
 }
 
@@ -22,28 +22,101 @@ h1{
     margin-right: 6rem;
     margin-top: 1rem;
     font-size: 4.5rem;
-    color: rgb(238, 240, 243)
+    color: #2d9e82;
 }
 
 .mainapp{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     width: calc(100%-1rem);
     height: var(--left_height-);
     margin: 0.5rem;
+    margin-top: 0px !important;
 }
 
 .mainapp > div{
-    /* border:1px rgba(48, 48, 48, 0.411) solid; */
-    border: 1px solid rgba(184, 108, 217, 0.3);
-    background-color: black;
+    border: 1px solid #4b3e3267;
+    background-color: #FFEBD8;
     height: calc(var(--left_height)/5);
     grid-column: span 1;
-    color: #d32545;
+    color: #024736;
     padding: 0.2rem;
-    font-family: 'pacifico';
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 0.9rem;
     box-sizing: border-box;
+}
+
+button{
+    border: none;
+    color: #d32545;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: 'pacifico';
+}
+
+form{
+    height: calc(100% - 1rem);
+    width: 100%;
+    padding: 2px;
+}
+
+input{
+    width: 100%;
+    color: white;
+    border: none;
+    font-family: 'poppins';
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active{
+    display:block !important;
+}
+
+
+.journal{
+    display: none;
+    z-index: 5;
+    position: absolute;
+    height: 80%;
+    top: 5%;
+    width: 50%;
+    background-color: aliceblue;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+}
+
+.weeknames{
+    height: 2.2rem;
+    width: calc(100%-1rem);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0.5rem;
+    margin-bottom: 0px;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-bottom: 0.1rem;
+}
+
+.weeknames > h2{
+    text-align: center;
+    background-color: #DC8686;
+    font-size: 1.2rem;
+    font-family: 'roboto';
+    letter-spacing: 2px;
 }
