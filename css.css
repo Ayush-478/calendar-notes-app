@@ -38,7 +38,6 @@ h1{
     border: 1px solid #4b3e3267;
     background-color: #FFEBD8;
     height: calc(var(--left_height)/5);
-    grid-column: span 1;
     color: #024736;
     padding: 0.2rem;
     font-family: 'Times New Roman', Times, serif;
@@ -49,24 +48,40 @@ h1{
 
 button{
     border: none;
+    background-color:#FFEBD8;
+    box-sizing: border-box;
     color: #d32545;
     letter-spacing: 2px;
     cursor: pointer;
     font-size: 0.8rem;
     font-family: 'pacifico';
+    width: 9%;
+    height: 100%;
 }
 
 form{
-    height: calc(100% - 1rem);
-    width: 100%;
-    padding: 2px;
+    float: right;
+    width:91%;
+    height:100%;
+    padding:none;
 }
 
 input{
-    width: 100%;
-    color: white;
+    padding-left: 0.3rem;
     border: none;
+    width: 100%;
+    color: black;
+    background-color: #2d9e82;
     font-family: 'poppins';
+}
+
+div > input{
+    display: inline;
+    box-sizing: border-box;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 .overlay{
