@@ -47,7 +47,7 @@ h1{
 }
 
 button{
-    border: none;
+    border: 1px solid #DC8686;
     background-color:#FFEBD8;
     box-sizing: border-box;
     color: #d32545;
@@ -67,12 +67,19 @@ form{
 }
 
 input{
+    background-color: #FFEBD8;
+    height: 1.65rem;
+    font-weight: 400;
+    font-size: 1.25rem;
     padding-left: 0.3rem;
-    border: none;
+    border: 0px;
     width: 100%;
     color: black;
-    background-color: #2d9e82;
     font-family: 'poppins';
+}
+
+.border_bottom{
+    border-bottom: solid 1px black;
 }
 
 div > input{
@@ -134,4 +141,27 @@ textarea:focus, input:focus{
     font-size: 1.2rem;
     font-family: 'roboto';
     letter-spacing: 2px;
+}
+
+.journal{
+    background-color: white;
+}
+
+textarea{
+    font-size: 1.3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    width: 100%;
+    resize: none;
+}
+
+.tasks_textarea{
+    height: 40%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px black;
+}
+
+.journal_textarea{
+    height: 60%;
 }
