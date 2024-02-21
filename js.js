@@ -15,21 +15,11 @@ for (let a = 0; a <key_arr.length; a++){
     }
 }
 
+//Expand Functionality
 document.addEventListener('click', (e)=>{
     if (e.target.id =='expand_button'){
         overlay.classList.add('active');
         journal.classList.add('active');
-    }
-
-    if (e.target.id == 'overlay'){
-        overlay.classList.remove('active')
-        journal.classList.remove('active')
-        document.getElementById('tasks_textarea').value = '';
-    }
-    
-    //Functionality of the journal System
-    if (e.target.tagName == 'BUTTON'){
-        let tasks_textarea = document.getElementById('tasks_textarea');
         butt_num = e.target.innerText;
         butt_num = butt_num.toString();
         if (localStorage.getItem('journal'+butt_num) != null){
@@ -38,16 +28,25 @@ document.addEventListener('click', (e)=>{
         else{
             jounral_textarea.value = '';
         }
-
         for (let i = 1; i < 6; i++){
             let ele = butt_num  + '_' + i + '_';
             if (localStorage.getItem(ele) != null){
-                tasks_textarea.value += '-' + localStorage.getItem(ele) + '\n';
+                document.getElementById('button'+i).innerText = '-' + localStorage.getItem(ele)
             }
+        }
+    }
+
+    if (e.target.id == 'overlay'){
+        overlay.classList.remove('active')
+        journal.classList.remove('active')
+        for (let i = 1; i < 6; i++){
+            document.getElementById('button'+i).innerText = '';
         }
     }
 })
 
+
+//LocalStorage Inputs
 document.addEventListener('input', (e)=>{
     if (e.target.tagName == 'INPUT'){
         let task_input = document.getElementById(e.target.id)
@@ -58,7 +57,14 @@ document.addEventListener('input', (e)=>{
 
     }
 })
-
 jounral_textarea.addEventListener('input', (e)=>{
     localStorage.setItem('journal'+butt_num, jounral_textarea.value)
+})
+
+//Task check & uncheck functionality
+document.getElementById('tasks_cont').addEventListener('click', (e)=>{
+    if (e.target.classList.contains('task_button')){     
+        e.target.classList.toggle('task_done');
+    }
+    let ele = butt_num  + '_' + e.target.id.substring(6) + '_';
 })
